@@ -25,7 +25,7 @@ module.exports = {
             port : '12178',
             repo : 'git@github.com:wf-yrx/angular6-todo.git',
             path : '/home/yueyagou/www/wf/ng/server',
-            'post-deploy' : 'git init && git pull && npm install && pm2 reload ecosystem.config.js --env production',
+            'post-deploy' : 'git pull && npm install && pm2 reload ecosystem.config.js --env production',
         }
     }
 };
