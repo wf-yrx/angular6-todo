@@ -6,7 +6,7 @@ let ObjectId = require('mongodb').ObjectID;
 let operatorDB = require('../modules/operatorDB');
 
 let db = 'wfdb';
-let collection = 'wfCollection';
+let collection = 'angularTodo';
 
 // let db = 'xrr';
 // let collection = 'xrrCollection';
