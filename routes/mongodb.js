@@ -5,11 +5,11 @@ let ObjectId = require('mongodb').ObjectID;
 
 let operatorDB = require('../modules/operatorDB');
 
-// let db = 'wfdb';
-// let collection = 'wfCollection';
+let db = 'wfdb';
+let collection = 'wfCollection';
 
-let db = 'xrr';
-let collection = 'xrrCollection';
+// let db = 'xrr';
+// let collection = 'xrrCollection';
 
 router.get('/find',function(req,res,next){
     operatorDB.find(db,collection,'',(err,content)=>{
