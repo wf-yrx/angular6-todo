@@ -18,7 +18,7 @@ function connectDb(callback){
         if(callback){
             callback(db);
         }
-        db.close();
+        // db.close();
     })
 }
 
