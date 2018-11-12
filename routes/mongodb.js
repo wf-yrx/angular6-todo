@@ -40,7 +40,7 @@ router.get('/findOne',function(req,res,next){
 
 router.get('/insertOne',function(req,res,next){
     // console.log('获取前端的请求参数',req.query);
-    operatorDB.insertOne(db,collection,{'adress':req.query.adress,'story':req.query.story,'person':req.query.person},(err,content)=>{
+    operatorDB.insertOne(db,collection,{'hobby':req.query.hobby,'isClick':req.query.isClick === "true"?true:false},(err,content)=>{
         if(!err){
             res.json(content);
         }
@@ -49,7 +49,7 @@ router.get('/insertOne',function(req,res,next){
 
 router.get('/updateOne',function(req,res,next){
     // console.log('获取前端的请求参数',req.query);
-    operatorDB.updateOne(db,collection,{'_id':ObjectId(req.query.id)},{$set:{'adress':req.query.adress,'story':req.query.story,'person':req.query.person}},(err,content)=>{
+    operatorDB.updateOne(db,collection,{'_id':ObjectId(req.query.id)},{$set:{'isClick':req.query.isClick === "true"?true:false}},(err,content)=>{
         if(!err){
             res.json(content);
         }
